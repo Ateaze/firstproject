@@ -1,0 +1,26 @@
+{{>layouts/header}}
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#coffee}}
+        <tr>
+            <th>{{id}}</th>
+            <td>{{Name}}</td>
+            <td>{{Price}}</td>
+        </tr>
+    {{/coffee}}
+    </tbody>
+</table>
+
+<a href="/coffee/{{coffee.id}}/edit" class="btn btn-primary">Edit</a>
+<a href="/coffee/{{coffee.id}}/delete" class="btn btn-danger">Delete</a>
+<a href="/coffee">Go to Coffee List</a>
+
+{{>layouts/footer}}
