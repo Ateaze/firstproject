@@ -13,4 +13,6 @@ public interface CommentRepository extends CrudRepository<Comment, Long> {
     List<Comment> findByArticleId(Long articleId);
     // 특정 닉네임의 모든 댓글 조회
     List<Comment> findByNickname(String nickname);
+
+    Long article_id(Long articleId);
 }
