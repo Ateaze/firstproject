@@ -17,7 +17,7 @@ public class ArticleService {
     @Autowired
     private ArticleRepository articleRepository;
     public List<Article> index() {
-        return articleRepository.findAll();
+        return articleRepository.findAllByOrderByIdDesc();
     }
 
     public Article show(Long id) {

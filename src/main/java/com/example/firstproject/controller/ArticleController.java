@@ -64,8 +64,8 @@ public class ArticleController {
 
     @GetMapping("/articles")
     public String index(Model model) {
-        // 1. 모든 데이터 가져오기
-        ArrayList<Article> articleEntityList = articleRepository.findAll();
+        // 1. 모든 데이터 가져오기 (ID 기준 내림차순 정렬)
+        ArrayList<Article> articleEntityList = articleRepository.findAllByOrderByIdDesc();
         // 2. 모델에 데이터 등록하기
         model.addAttribute("articleList", articleEntityList);
         // 3. 뷰 페이지 설정하기
